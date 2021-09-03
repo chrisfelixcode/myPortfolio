@@ -17,3 +17,35 @@
       background-color: aliceblue;
       margin: 0 20px;
     }
+
+    .flex-container {
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+            justify-content: flex-start;
+        }
+
+        .flex-item {
+            padding: 60px;
+            margin: 20px;
+            background-color: red;
+            color: white;
+
+        }
+
+        .flex-item1 {
+            padding: 60px;
+            margin: 20px;
+            background-color: red;
+            color: white;
+            order: 1;
+        }
+
+        .test {
+            /* display: inline-flex; */
+        }
+
+        .block {
+            display: inline;
+        }
