@@ -1,0 +1,20 @@
+on: push
+name: Build weather app
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Deploy to heroku
+        env:
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME}}
+          HEROKU_API_TOKEN: ${{secrets.HEROKU_API_TOKEN}}
+        if: job.status == 'success'
+        run: |
+          git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
+          git push heroku HEAD:master -f
