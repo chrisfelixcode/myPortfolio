@@ -1,0 +1,19 @@
+    h1 {
+      color: crimson;
+      text-align: center;
+    }
+
+    h2 {
+      background-color: black;
+      color: white;
+    }
+
+    h3 {
+      background-color: hsl(0, 0%, 45%);
+      color: aliceblue;
+    }
+
+    body {
+      background-color: aliceblue;
+      margin: 0 20px;
+    }
